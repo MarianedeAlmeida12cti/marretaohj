@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Marretão hoje?</title>
 </head>
 <body>
-    
+    <div class="box">
+        <p>Marretão hoje?</p>
+            <div class="buttons-container">
+                     <button>
+                        <a href="https://youtu.be/cv46BeOwdqY?si=bXkHMn2OI0m8wRmW" target="_blank">Sim</a>
+                    </button>
+                <button id="no">Não</button>
+            </div>
+        </div>
 </body>
+<script>
+
+    moveButton.addEventListener("click", function () {
+        var vertical = Math.floor(Math.random() * 400)
+        var horizontal = Math.floor(Math.random() * 400)
+        moveButton.style.position = "absolute";
+        moveButton.style.top = horizontal + "px";
+        moveButton.style.left = vertical + "px";
+    });
+
+    correctlyButton.addEventListener("click", function (){
+        alert("Resposta correta! Sim, vamos jogar.");
+    });
+</script>
 </html>
